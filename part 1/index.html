@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- API KEY:  AIzaSyDE6k539tFPvcMmW3n-6Tb7Qt0XrqCIbuo -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    
+    <!--<link rel="stylesheet" href="css/stylesheet.css" type="text/css">-->
+    <script>
+      //ons.platform.select('android')
+      //ons.platform.select('ios')
+    </script>
+    <title>Onsen</title>
+  </head>
+  <body>
+    <ons-navigator swipeable id="myNav" page="frontPage.html"></ons-navigator>
+
+    <template id="frontPage.html">
+      <ons-page id="frontPage">
+        <ons-toolbar>
+          <div class="center">Front Page</div>
+        </ons-toolbar>
+        <p class="center">
+          Main Page
+        </p>
+
+        <div class="center" style="text-align: center;">
+          <ons-button id="donkeyButton">
+            Strange Horse
+          </ons-button>
+          <ons-button id="moodelButton">
+            Small Man
+          </ons-button>
+          <ons-button id="aboutButton">
+            About
+          </ons-button>
+        </div>
+      </ons-page> 
+    </template>
+
+    <template id="donkey.html">
+      <ons-page id="donkey">
+        <ons-toolbar>
+          <ons-back-button>
+            Back
+          </ons-back-button>
+          <div class="center">
+          <p>
+            Strange Horse Thing
+          </p>
+          </div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <img src="images/donkey.jpg" class="centerImage" alt="Strange Horse" width="80%">
+            <p>
+              Strange horse with long ears. Very stubborn, hates kids.
+            </p>
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+    <template id="moodel.html">
+      <ons-page id="moodel">
+        <ons-toolbar>
+          <ons-back-button>
+            Back
+          </ons-back-button>
+          <div class="center">Moodel</div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <img src="images/moodel.jpg" class="centerImage" alt="Small Man" width="80%">
+            <p>
+              Small grumpy man. Hates most people. Very cute though.
+            </p>
+          </div>
+        </div>
+        
+      </ons-page>
+    </template>
+
+    <template id="about.html">
+      <ons-page id="about">
+        <ons-toolbar>
+          <ons-back-button>
+            Back
+          </ons-back-button>
+          <div class="center">About</div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div id="aboutInfo" class="center">
+            <p>
+              This is a Zoo with information about different animals.
+            </p>
+            <p>
+              Group Name: Ååh nej ska vi ha ett namn?
+            </p>
+            <p>
+              Group members: Filip Stål, Joel Weidenmark
+            </p>
+          </div>    
+        
+      </ons-page>
+    </template>
+    
+    <!--<ons-button onclick="alert('Hello World!')">Click Me</ons-button>-->
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>

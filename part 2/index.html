@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- API KEY:  AIzaSyDE6k539tFPvcMmW3n-6Tb7Qt0XrqCIbuo -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    
+    <!--<link rel="stylesheet" href="css/stylesheet.css" type="text/css">-->
+    <script>
+      //ons.platform.select('android')
+      //ons.platform.select('ios')
+    </script>
+    <title>Onsen</title>
+  </head>
+  <body>
+    <!--<ons-navigator swipeable id="myNav" page="frontPage.html"></ons-navigator>-->
+    
+    <ons-page>
+      <ons-tabbar swipeable position="auto">
+        <ons-tab page="about.html" icon="fa-question" material:md-home" active>
+        </ons-tab>
+        <ons-tab page="donkey.html" icon="fa-tree">
+        </ons-tab> 
+        <ons-tab page="moodel.html" icon="fa-building">
+        </ons-tab>
+        <ons-tab page="bird.html" icon="fa-leaf">
+        </ons-tab>
+      </ons-tabbar>
+    </ons-page>  
+
+    <template id="frontPage.html">
+      <ons-page id="frontPage">
+        <p class="center">
+          Front Page
+        </p>
+      </ons-page>
+    </template>
+    
+    <ons-splitter>
+      <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+        <ons-page>
+          <ons-list>
+            <ons-list-item onclick="fn.load('about.html')" tappable>
+              About
+            </ons-list-item>
+            <ons-list-item onclick="fn.load('settings.html')" tappable>
+              Settings
+            </ons-list-item>
+          </ons-list>
+        </ons-page>
+      </ons-splitter-side>
+      <ons-splitter-content id="content" page="about.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <template id="settings.html">
+      <ons-page id="settings">
+        <ons-toolbar style="background-color: #efeff4;">
+          <div class="center">
+            Settings
+          </div>
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <p>
+              Clicky click 
+            </p>
+            <ons-switch></ons-switch>
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+
+    <template id="bird.html">
+      <ons-page id="bird">
+        <ons-toolbar style="background-color: #efeff4;">
+          <div class="center">
+            Colory Bird
+          </div>
+
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <img src="images/colorBird.jpg" class="centerImage" alt="Bird" width="80%">
+            <p>
+              Some kind of colory bird. Not sure if it belongs here. Eats mostly bread. Only has one leg. 
+            </p>
+            <br/>
+            <p>
+              Spotted:
+            </p>
+            <ons-switch></ons-switch>
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+    <template id="donkey.html">
+      <ons-page id="donkey">
+        <ons-toolbar style="background-color: #efeff4;">
+          <div class="center">
+            Strange Horse Thing
+          </div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <img src="images/donkey.jpg" class="centerImage" alt="Strange Horse" width="80%">
+            <p>
+              Strange horse with long ears. Very stubborn, hates kids.
+            </p>
+            <br/>
+            <p>
+              Spotted:
+            </p>
+            <ons-switch></ons-switch>
+          </div>
+        </div>
+      </ons-page>
+    </template>
+
+    <template id="moodel.html">
+      <ons-page id="moodel">
+        <ons-toolbar style="background-color: #efeff4;">
+          <div class="center">Moodel</div>
+          <div class="right">
+            <ons-toolbar-button onclick="showDialogFunc()">OBS!</ons-toolbar-button>
+          </div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div class="standardInfo">
+            <img src="images/moodel.jpg" class="centerImage" alt="Small Man" width="80%">
+            <p>
+              Small grumpy man. Drinks a lot of coffee. Very cute.
+            </p>
+            <br/>
+            <p>
+              Spotted:
+            </p>
+            <ons-switch></ons-switch>
+          </div>
+        </div>
+        
+      </ons-page>
+    </template>
+
+    <template id="dialog.html">
+      <ons-dialog id="obsDialog">
+        <div style="text-align: center; padding: 10px;">
+          <p>
+            Don't feed the grumpy man!
+          </p>
+
+          <p>
+            <ons-button onclick="hideDialogFunc('my-dialog')">Close</ons-button>
+          </p>
+        </div>
+      </ons-dialog>
+    </template>
+
+    <template id="about.html">
+      <ons-page id="about">
+        <ons-toolbar style="background-color: #efeff4;">
+          <div class="left">
+            <ons-toolbar-button onclick="fn.open()">
+              <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+          </div>
+          <div class="center">About</div>
+        </ons-toolbar>
+        <div class="wrapper">
+          <div id="aboutInfo" class="center">
+            <p>
+              This is a Zoo with information about different animals. If you see one of the animals, click the switch.
+            </p>
+            <p>
+              Group Name: Ååh nej måste vi ha ett namn?
+            </p>
+            <p>
+              Group members: Filip Stål, Joel Weidenmark
+            </p>
+          </div>    
+        
+      </ons-page>
+    </template>
+    
+    <!--<ons-button onclick="alert('Hello World!')">Click Me</ons-button>-->
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
