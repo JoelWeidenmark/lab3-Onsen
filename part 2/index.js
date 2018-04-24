@@ -60,7 +60,6 @@ function showDialogFunc() {
         dialog.show();
       });
   }
-
     //document.getElementById("obsDialog").show();
 };
 
